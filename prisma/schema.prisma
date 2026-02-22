@@ -1,0 +1,87 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Client {
+  id        String     @id @default(cuid())
+  name      String
+  cpf       String?
+  phone     String?
+  email     String?
+  analyses  Analysis[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Analysis {
+  id                  String         @id @default(cuid())
+  // Identificação do Contrato
+  contractNumber      String
+  bank                String
+  contractModality    String         @default("Financiamento de Veículo")
+  vehicleModel        String?
+  contractDate        DateTime
+  releasedValue       Decimal        @db.Decimal(15, 2)
+  installments        Int
+  installmentValue    Decimal        @db.Decimal(15, 2)
+  contractedRate      Decimal        @db.Decimal(8, 4)
+  // Informações Declaradas
+  installmentsPaid    Int            @default(0)
+  overdueInstallments Int            @default(0)
+  // Status e relações
+  status              AnalysisStatus @default(DRAFT)
+  clientId            String
+  client              Client         @relation(fields: [clientId], references: [id])
+  scenarios           Scenario[]
+  pdfUrl              String?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+}
+
+model Scenario {
+  id                 String       @id @default(cuid())
+  type               ScenarioType
+  rate               Decimal      @db.Decimal(8, 4)
+  monthlyInstallment Decimal      @db.Decimal(15, 2)
+  totalDue           Decimal      @db.Decimal(15, 2)
+  totalPaid          Decimal      @db.Decimal(15, 2)
+  overpaid           Decimal      @db.Decimal(15, 2)
+  savings            Decimal      @db.Decimal(15, 2)
+  reductionPct       Decimal      @db.Decimal(8, 4)
+  isAbusive          Boolean
+  analysisId         String
+  analysis           Analysis     @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+}
+
+model BcbRate {
+  id        String   @id @default(cuid())
+  month     Int
+  year      Int
+  rate      Decimal  @db.Decimal(8, 4)
+  source    String   @default("BCB-OSTAT")
+  isFixed   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([month, year, isFixed])
+}
+
+enum AnalysisStatus {
+  DRAFT
+  FINALIZED
+}
+
+enum ScenarioType {
+  BCB_AVERAGE
+  FIXED_148
+  BCB_150
+  CUSTOM
+}
