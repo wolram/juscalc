@@ -13,8 +13,23 @@ export default async function ClientDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const client = await getClientById(id);
-  if (!client) notFound();
+  const rawClient = await getClientById(id);
+  if (!rawClient) notFound();
+
+  const client = {
+    ...rawClient,
+    createdAt: rawClient.createdAt.toISOString(),
+    updatedAt: rawClient.updatedAt.toISOString(),
+    analyses: rawClient.analyses.map((a) => ({
+      ...a,
+      contractDate: a.contractDate.toISOString(),
+      releasedValue: Number(a.releasedValue),
+      installmentValue: Number(a.installmentValue),
+      contractedRate: Number(a.contractedRate),
+      createdAt: a.createdAt.toISOString(),
+      updatedAt: a.updatedAt.toISOString(),
+    })),
+  };
 
   return (
     <div className="space-y-4 max-w-3xl mx-auto">
@@ -76,7 +91,7 @@ export default async function ClientDetailPage({
                   </p>
                 </div>
                 <div className="flex items-center gap-3 ml-4">
-                  <span className="text-sm font-medium">{formatBRL(Number(analysis.releasedValue))}</span>
+                  <span className="text-sm font-medium">{formatBRL(analysis.releasedValue)}</span>
                   <Badge
                     variant={analysis.status === "FINALIZED" ? "default" : "secondary"}
                     className="text-xs"

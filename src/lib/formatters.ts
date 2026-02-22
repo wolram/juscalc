@@ -1,3 +1,34 @@
+import type { AnalysisWithRelations, SerializedAnalysis } from "@/types";
+
+export function serializeAnalysis(a: AnalysisWithRelations): SerializedAnalysis {
+  return {
+    ...a,
+    contractDate: a.contractDate.toISOString(),
+    releasedValue: Number(a.releasedValue),
+    installmentValue: Number(a.installmentValue),
+    contractedRate: Number(a.contractedRate),
+    createdAt: a.createdAt.toISOString(),
+    updatedAt: a.updatedAt.toISOString(),
+    client: {
+      ...a.client,
+      createdAt: a.client.createdAt.toISOString(),
+      updatedAt: a.client.updatedAt.toISOString(),
+    },
+    scenarios: a.scenarios.map((s) => ({
+      ...s,
+      rate: Number(s.rate),
+      monthlyInstallment: Number(s.monthlyInstallment),
+      totalDue: Number(s.totalDue),
+      totalPaid: Number(s.totalPaid),
+      overpaid: Number(s.overpaid),
+      savings: Number(s.savings),
+      reductionPct: Number(s.reductionPct),
+      createdAt: s.createdAt.toISOString(),
+      updatedAt: s.updatedAt.toISOString(),
+    })),
+  };
+}
+
 export function formatBRL(value: number): string {
   return new Intl.NumberFormat("pt-BR", {
     style: "currency",

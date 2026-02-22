@@ -15,7 +15,7 @@ import {
   calculateRemainingBalance,
 } from "@/lib/calculations";
 import { ScenarioComparison } from "@/components/analyses/scenario-comparison";
-import { formatBRL, formatDate, formatPercent } from "@/lib/formatters";
+import { formatBRL, formatDate, formatPercent, serializeAnalysis } from "@/lib/formatters";
 
 export default async function AnalysisDetailPage({
   params,
@@ -23,18 +23,19 @@ export default async function AnalysisDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const analysis = await getAnalysisById(id);
-  if (!analysis) notFound();
+  const rawAnalysis = await getAnalysisById(id);
+  if (!rawAnalysis) notFound();
+  const analysis = serializeAnalysis(rawAnalysis);
 
   const contractDate = new Date(analysis.contractDate);
   const bcbRate = await getRateForMonth(contractDate.getMonth() + 1, contractDate.getFullYear());
   const bcbRateValue = bcbRate ? Number(bcbRate.rate) : 1.5;
 
   const contractInput = {
-    releasedValue: Number(analysis.releasedValue),
+    releasedValue: analysis.releasedValue,
     installments: analysis.installments,
-    installmentValue: Number(analysis.installmentValue),
-    contractedRate: Number(analysis.contractedRate),
+    installmentValue: analysis.installmentValue,
+    contractedRate: analysis.contractedRate,
     installmentsPaid: analysis.installmentsPaid,
   };
 
@@ -102,10 +103,10 @@ export default async function AnalysisDetailPage({
                     ["Modalidade", analysis.contractModality],
                     ...(analysis.vehicleModel ? [["Veículo", analysis.vehicleModel] as [string, string]] : []),
                     ["Data", formatDate(analysis.contractDate)],
-                    ["Valor Financiado", formatBRL(Number(analysis.releasedValue))],
+                    ["Valor Financiado", formatBRL(analysis.releasedValue)],
                     ["Total de Parcelas", `${analysis.installments}x`],
-                    ["Parcela", formatBRL(Number(analysis.installmentValue))],
-                    ["Taxa Contratada", `${formatPercent(Number(analysis.contractedRate))} a.m.`],
+                    ["Parcela", formatBRL(analysis.installmentValue)],
+                    ["Taxa Contratada", `${formatPercent(analysis.contractedRate)} a.m.`],
                     ["Taxa BACEN (período)", `${formatPercent(bcbRateValue)} a.m.`],
                   ] as [string, string][]
                 ).map(([label, value]) => (

@@ -5,13 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getDashboardStats, listAnalyses } from "@/services/analysis.service";
-import { formatBRL, formatDate } from "@/lib/formatters";
+import { formatBRL, formatDate, serializeAnalysis } from "@/lib/formatters";
 
 async function DashboardContent() {
-  const [stats, { data: recentAnalyses }] = await Promise.all([
+  const [stats, { data: rawRecentAnalyses }] = await Promise.all([
     getDashboardStats(),
     listAnalyses(1, 5),
   ]);
+  const recentAnalyses = rawRecentAnalyses.map(serializeAnalysis);
 
   const kpis = [
     {
@@ -107,7 +108,7 @@ async function DashboardContent() {
                     </p>
                   </div>
                   <div className="flex items-center gap-3 ml-4 shrink-0">
-                    <span className="text-sm font-medium">{formatBRL(Number(analysis.releasedValue))}</span>
+                    <span className="text-sm font-medium">{formatBRL(analysis.releasedValue)}</span>
                     <Badge
                       variant={analysis.status === "FINALIZED" ? "default" : "secondary"}
                       className="text-xs"

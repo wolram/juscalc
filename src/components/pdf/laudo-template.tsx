@@ -253,26 +253,26 @@ export function LaudoDocument({
     <Document
       title={`Laudo Revisional — ${analysis.client.name}`}
       author="Dra. Isis Lisboa & Associados"
-      subject="Laudo Tecnico de Revisao Contratual"
+      subject="Laudo Técnico de Revisão Contratual"
     >
       <Page size="A4" style={styles.page}>
-        {/* CABECALHO */}
+        {/* CABEÇALHO */}
         <View style={styles.headerContainer}>
-          <Text style={styles.headerTitle}>Laudo Tecnico de Revisao Contratual</Text>
+          <Text style={styles.headerTitle}>Laudo Técnico de Revisão Contratual</Text>
           <Text style={styles.headerSubtitle}>
-            Dra. Isis Lisboa & Associados — Revisao de Financiamento Bancario
+            Dra. Isis Lisboa & Associados — Revisão de Financiamento Bancário
           </Text>
           <Text style={styles.headerMeta}>
             Cliente: {analysis.client.name}{"   "}|{"   "}Emitido em: {fmtDate(new Date())}
           </Text>
         </View>
 
-        {/* SECAO 1 — Identificacao do Contrato */}
+        {/* SEÇÃO 1 — Identificação do Contrato */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>1. Identificacao do Contrato</Text>
+          <Text style={styles.sectionTitle}>1. Identificação do Contrato</Text>
           <View style={styles.row}>
             <View style={styles.col2}>
-              <Text style={styles.dataLabel}>Instituicao Financeira</Text>
+              <Text style={styles.dataLabel}>Instituição Financeira</Text>
               <Text style={styles.dataValue}>{analysis.bank}</Text>
             </View>
             <View style={styles.col2}>
@@ -283,7 +283,7 @@ export function LaudoDocument({
           {analysis.vehicleModel ? (
             <View style={[styles.row, { marginTop: 4 }]}>
               <View style={styles.col2}>
-                <Text style={styles.dataLabel}>Modelo do Veiculo</Text>
+                <Text style={styles.dataLabel}>Modelo do Veículo</Text>
                 <Text style={styles.dataValue}>{analysis.vehicleModel}</Text>
               </View>
               <View style={styles.col2} />
@@ -291,7 +291,7 @@ export function LaudoDocument({
           ) : null}
           <View style={[styles.row, { marginTop: 4 }]}>
             <View style={styles.col2}>
-              <Text style={styles.dataLabel}>Data da Contratacao</Text>
+              <Text style={styles.dataLabel}>Data da Contratação</Text>
               <Text style={styles.dataValue}>{fmtDate(analysis.contractDate)}</Text>
             </View>
             <View style={styles.col2}>
@@ -311,9 +311,9 @@ export function LaudoDocument({
           </View>
         </View>
 
-        {/* SECAO 2 — Informacoes Declaradas */}
+        {/* SEÇÃO 2 — Informações Declaradas */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>2. Informacoes Declaradas do Contrato</Text>
+          <Text style={styles.sectionTitle}>2. Informações Declaradas do Contrato</Text>
           <View style={styles.row}>
             <View style={styles.col2}>
               <Text style={styles.dataLabel}>Valor da Parcela Atual</Text>
@@ -326,7 +326,7 @@ export function LaudoDocument({
           </View>
           <View style={[styles.row, { marginTop: 4 }]}>
             <View style={styles.col2}>
-              <Text style={styles.dataLabel}>Valor Total Ja Pago</Text>
+              <Text style={styles.dataLabel}>Valor Total Já Pago</Text>
               <Text style={styles.dataValue}>{fmtBRL(totalPaid)}</Text>
             </View>
             <View style={styles.col2}>
@@ -336,14 +336,14 @@ export function LaudoDocument({
           </View>
         </View>
 
-        {/* SECAO 3 — Comparacao BACEN */}
+        {/* SEÇÃO 3 — Comparação BACEN */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>
-            3. Comparacao com Parametro de Mercado (BACEN)
+            3. Comparação com Parâmetro de Mercado (BACEN)
           </Text>
           <View style={styles.row}>
             <View style={styles.col2}>
-              <Text style={styles.dataLabel}>Taxa Media BACEN (periodo)</Text>
+              <Text style={styles.dataLabel}>Taxa Média BACEN (período)</Text>
               <Text style={styles.dataValue}>{fmtPct(bcbRate)} a.m.</Text>
             </View>
             <View style={styles.col2}>
@@ -356,24 +356,24 @@ export function LaudoDocument({
           {bcbScenario && bcbScenario.monthlyDiff > 0 ? (
             <View style={[styles.row, { marginTop: 4 }]}>
               <View style={styles.col2}>
-                <Text style={styles.dataLabel}>Diferenca Mensal (pago a mais)</Text>
+                <Text style={styles.dataLabel}>Diferença Mensal (pago a mais)</Text>
                 <Text style={styles.dataValue}>{fmtBRL(bcbScenario.monthlyDiff)}</Text>
               </View>
               <View style={styles.col2}>
-                <Text style={styles.dataLabel}>Total Ja Desembolsado a Maior</Text>
+                <Text style={styles.dataLabel}>Total Já Desembolsado a Maior</Text>
                 <Text style={styles.dataValue}>{fmtBRL(bcbScenario.overpaid)}</Text>
               </View>
             </View>
           ) : null}
         </View>
 
-        {/* SECAO 4 — Projecao 3 Cenarios */}
+        {/* SEÇÃO 4 — Projeção 3 Cenários */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>
-            4. Projecao Financeira Estimativa — 3 Cenarios
+            4. Projeção Financeira Estimativa — 3 Cenários
           </Text>
           <View style={styles.tableHeader}>
-            <Text style={[styles.tableHeaderCell, { flex: 1.5 }]}>Cenario</Text>
+            <Text style={[styles.tableHeaderCell, { flex: 1.5 }]}>Cenário</Text>
             <Text style={styles.tableHeaderCell}>Taxa a.m.</Text>
             <Text style={styles.tableHeaderCellRight}>Parcela</Text>
             <Text style={styles.tableHeaderCellRight}>Red. Mensal</Text>
@@ -402,24 +402,24 @@ export function LaudoDocument({
           ))}
         </View>
 
-        {/* SECAO 5 — Diagnostico */}
+        {/* SEÇÃO 5 — Diagnóstico */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>5. Diagnostico Comparativo Automatico</Text>
+          <Text style={styles.sectionTitle}>5. Diagnóstico Comparativo Automático</Text>
           <View style={diagBadgeStyle}>
             <Text style={diagTitleStyle}>{diagnostic.label}</Text>
             <Text style={styles.badgeDesc}>{diagnostic.description}</Text>
           </View>
         </View>
 
-        {/* SECAO 6 — Conclusao */}
+        {/* SEÇÃO 6 — Conclusão */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>6. Conclusao Automatica</Text>
+          <Text style={styles.sectionTitle}>6. Conclusão Automática</Text>
           <Text style={styles.conclusionText}>{conclusion}</Text>
           <View style={styles.disclaimer}>
             <Text>
-              O presente relatorio possui carater tecnico-informativo e estimativo, nao
-              representando garantia de resultado, dependendo qualquer medida de analise completa
-              da documentacao e apreciacao pelo Poder Judiciario. Fundamentacao: CDC art. 51,
+              O presente relatório possui caráter técnico-informativo e estimativo, não
+              representando garantia de resultado, dependendo qualquer medida de análise completa
+              da documentação e apreciação pelo Poder Judiciário. Fundamentação: CDC art. 51,
               STJ REsp 1.061.530/RS, Res. BCB n. 4.855/2020.
             </Text>
           </View>
@@ -428,7 +428,7 @@ export function LaudoDocument({
         {/* FOOTER */}
         <View style={styles.footer} fixed>
           <Text style={styles.footerText}>
-            Dra. Isis Lisboa & Associados — Revisao Contratual Bancaria
+            Dra. Isis Lisboa & Associados — Revisão Contratual Bancária
           </Text>
           <Text style={styles.footerText}>
             {analysis.client.name} — Emitido em {fmtDate(new Date())}

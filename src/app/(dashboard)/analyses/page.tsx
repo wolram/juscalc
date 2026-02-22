@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { listAnalyses } from "@/services/analysis.service";
-import { formatBRL, formatDate, formatPercent } from "@/lib/formatters";
+import { formatBRL, formatDate, formatPercent, serializeAnalysis } from "@/lib/formatters";
 
 async function AnalysesList() {
-  const { data: analyses, total } = await listAnalyses(1, 50);
+  const { data: rawAnalyses, total } = await listAnalyses(1, 50);
+  const analyses = rawAnalyses.map(serializeAnalysis);
 
   return (
     <div className="space-y-4">
@@ -59,13 +60,13 @@ async function AnalysesList() {
                 <p className="text-xs text-muted-foreground truncate">{analysis.contractModality}</p>
               </div>
               <div className="text-right ml-4">
-                <p className="font-medium">{formatBRL(Number(analysis.releasedValue))}</p>
+                <p className="font-medium">{formatBRL(analysis.releasedValue)}</p>
                 <p className="text-xs text-muted-foreground">
-                  {analysis.installments}x {formatBRL(Number(analysis.installmentValue))}
+                  {analysis.installments}x {formatBRL(analysis.installmentValue)}
                 </p>
               </div>
               <div className="text-right ml-4">
-                <p className="font-mono">{formatPercent(Number(analysis.contractedRate))}</p>
+                <p className="font-mono">{formatPercent(analysis.contractedRate)}</p>
                 <p className="text-xs text-muted-foreground">a.m.</p>
               </div>
               <div className="ml-4">
