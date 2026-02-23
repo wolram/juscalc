@@ -28,7 +28,7 @@ export async function upsertRate(
       year,
       rate: new Prisma.Decimal(rate),
       isFixed,
-      source: isFixed ? "MANUAL" : "BCB-OSTAT",
+      source: isFixed ? "MANUAL" : "BCB-SGS",
     },
     update: {
       rate: new Prisma.Decimal(rate),
