@@ -9,7 +9,7 @@ const withPWA = require("next-pwa")({
 
 const nextConfig: NextConfig = {
   // Pacotes que devem rodar no servidor (não bundled pelo Turbopack/webpack)
-  serverExternalPackages: ["@prisma/client", "prisma", "@react-pdf/renderer", "pg"],
+  serverExternalPackages: ["@prisma/client", "prisma", "@react-pdf/renderer", "pg", "@anthropic-ai/sdk"],
   // Necessário para conviver com o webpack config injetado pelo next-pwa
   turbopack: {},
 };

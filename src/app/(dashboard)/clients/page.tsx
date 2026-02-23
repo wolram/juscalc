@@ -5,9 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { listClients } from "@/services/client.service";
 import { formatCPF } from "@/lib/formatters";
+import { createClient as createSupabaseClient } from "@/lib/supabase-server";
+import { prisma } from "@/lib/prisma";
 
 async function ClientsList() {
-  const { data: clients, total } = await listClients(1, 100);
+  const supabase = await createSupabaseClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  const member = user
+    ? await prisma.member.findFirst({ where: { userId: user.id } })
+    : null;
+
+  const { data: clients, total } = await listClients(member?.organizationId ?? "", 1, 100);
 
   return (
     <div className="space-y-4">

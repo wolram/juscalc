@@ -8,20 +8,59 @@ datasource db {
   provider = "postgresql"
 }
 
-model Client {
-  id        String     @id @default(cuid())
+// ─── Organização (escritório / tenant) ───────────────────────────────────────
+
+model Organization {
+  id        String    @id @default(cuid())
   name      String
-  cpf       String?
-  phone     String?
-  email     String?
+  slug      String    @unique
+  plan      PlanTier  @default(FREE)
+  logoUrl   String?
+  members   Member[]
+  clients   Client[]
   analyses  Analysis[]
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
+  calculations Calculation[]
+  processes Process[]
+  deadlines Deadline[]
+  finances  Finance[]
+  posts     Post[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 }
+
+model Member {
+  id             String       @id @default(cuid())
+  userId         String
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  role           MemberRole   @default(LAWYER)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@unique([userId, organizationId])
+}
+
+// ─── Clientes ─────────────────────────────────────────────────────────────────
+
+model Client {
+  id             String       @id @default(cuid())
+  name           String
+  cpf            String?
+  phone          String?
+  email          String?
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  analyses       Analysis[]
+  processes      Process[]
+  finances       Finance[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+// ─── Análises revisionais ─────────────────────────────────────────────────────
 
 model Analysis {
   id                  String         @id @default(cuid())
-  // Identificação do Contrato
   contractNumber      String
   bank                String
   contractModality    String         @default("Financiamento de Veículo")
@@ -31,13 +70,13 @@ model Analysis {
   installments        Int
   installmentValue    Decimal        @db.Decimal(15, 2)
   contractedRate      Decimal        @db.Decimal(8, 4)
-  // Informações Declaradas
   installmentsPaid    Int            @default(0)
   overdueInstallments Int            @default(0)
-  // Status e relações
   status              AnalysisStatus @default(DRAFT)
   clientId            String
   client              Client         @relation(fields: [clientId], references: [id])
+  organizationId      String
+  organization        Organization   @relation(fields: [organizationId], references: [id])
   scenarios           Scenario[]
   pdfUrl              String?
   createdAt           DateTime       @default(now())
@@ -74,6 +113,134 @@ model BcbRate {
   @@unique([month, year, isFixed])
 }
 
+// ─── Cálculos jurídicos ───────────────────────────────────────────────────────
+
+model Calculation {
+  id             String       @id @default(cuid())
+  type           CalcType
+  input          Json
+  result         Json
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  clientId       String?
+  processId      String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+// ─── Gestão processual ────────────────────────────────────────────────────────
+
+model Process {
+  id             String        @id @default(cuid())
+  cnjNumber      String
+  court          String
+  district       String?
+  judge          String?
+  type           ProcessType
+  status         ProcessStatus @default(ACTIVE)
+  subject        String
+  clientId       String
+  client         Client        @relation(fields: [clientId], references: [id])
+  organizationId String
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  movements      Movement[]
+  deadlines      Deadline[]
+  documents      Document[]
+  finances       Finance[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model Movement {
+  id          String   @id @default(cuid())
+  processId   String
+  process     Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
+  date        DateTime
+  description String
+  source      String   @default("MANUAL")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Deadline {
+  id             String         @id @default(cuid())
+  processId      String?
+  process        Process?       @relation(fields: [processId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization   @relation(fields: [organizationId], references: [id])
+  title          String
+  dueDate        DateTime
+  type           DeadlineType
+  status         DeadlineStatus @default(PENDING)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+}
+
+model Document {
+  id          String   @id @default(cuid())
+  processId   String
+  process     Process  @relation(fields: [processId], references: [id], onDelete: Cascade)
+  name        String
+  url         String
+  mimeType    String   @default("application/pdf")
+  sizeBytes   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── Financeiro ───────────────────────────────────────────────────────────────
+
+model Finance {
+  id             String        @id @default(cuid())
+  type           FinanceType
+  category       String
+  description    String
+  amount         Decimal       @db.Decimal(15, 2)
+  dueDate        DateTime
+  paidAt         DateTime?
+  status         FinanceStatus @default(PENDING)
+  clientId       String?
+  client         Client?       @relation(fields: [clientId], references: [id])
+  processId      String?
+  process        Process?      @relation(fields: [processId], references: [id])
+  organizationId String
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+// ─── Comunidade ───────────────────────────────────────────────────────────────
+
+model Post {
+  id             String       @id @default(cuid())
+  title          String
+  content        String       @db.Text
+  type           PostType
+  area           LegalArea
+  authorId       String
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  upvotes        Int          @default(0)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Template {
+  id          String    @id @default(cuid())
+  title       String
+  description String
+  content     String    @db.Text
+  type        String
+  area        LegalArea
+  authorId    String
+  downloads   Int       @default(0)
+  isPublic    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+
 enum AnalysisStatus {
   DRAFT
   FINALIZED
@@ -84,4 +251,88 @@ enum ScenarioType {
   FIXED_148
   BCB_150
   CUSTOM
+}
+
+enum PlanTier {
+  FREE
+  STARTER
+  PRO
+  ENTERPRISE
+}
+
+enum MemberRole {
+  OWNER
+  ADMIN
+  LAWYER
+  ASSISTANT
+}
+
+enum CalcType {
+  REVISIONAL
+  TRABALHISTA
+  PREVIDENCIARIO
+  ALIMENTOS
+  DANOS_MORAIS
+  ALUGUEL
+  HONORARIOS
+}
+
+enum ProcessType {
+  CIVIL
+  CRIMINAL
+  TRABALHISTA
+  PREVIDENCIARIO
+  TRIBUTARIO
+  FAMILIA
+  CONSUMIDOR
+}
+
+enum ProcessStatus {
+  ACTIVE
+  SUSPENDED
+  ARCHIVED
+  CLOSED
+}
+
+enum DeadlineType {
+  MANIFESTATION
+  HEARING
+  APPEAL
+  DOCUMENT
+  OTHER
+}
+
+enum DeadlineStatus {
+  PENDING
+  DONE
+  MISSED
+}
+
+enum FinanceType {
+  INCOME
+  EXPENSE
+}
+
+enum FinanceStatus {
+  PENDING
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+enum PostType {
+  ARTICLE
+  QUESTION
+  CASE_STUDY
+}
+
+enum LegalArea {
+  CIVIL
+  CRIMINAL
+  TRABALHISTA
+  PREVIDENCIARIO
+  FAMILIA
+  TRIBUTARIO
+  CONSUMIDOR
+  EMPRESARIAL
 }

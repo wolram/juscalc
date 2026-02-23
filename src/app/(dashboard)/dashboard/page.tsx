@@ -6,11 +6,22 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getDashboardStats, listAnalyses } from "@/services/analysis.service";
 import { formatBRL, formatDate, serializeAnalysis } from "@/lib/formatters";
+import { createClient } from "@/lib/supabase-server";
+import { prisma } from "@/lib/prisma";
 
 async function DashboardContent() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  const member = user
+    ? await prisma.member.findFirst({ where: { userId: user.id } })
+    : null;
+
+  const organizationId = member?.organizationId;
+
   const [stats, { data: rawRecentAnalyses }] = await Promise.all([
-    getDashboardStats(),
-    listAnalyses(1, 5),
+    getDashboardStats(organizationId),
+    listAnalyses(1, 5, organizationId),
   ]);
   const recentAnalyses = rawRecentAnalyses.map(serializeAnalysis);
 

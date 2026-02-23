@@ -85,6 +85,7 @@ export interface CreateAnalysisInput {
   installmentsPaid: number;
   overdueInstallments: number;
   clientId: string;
+  organizationId: string;
 }
 
 export interface CreateClientInput {

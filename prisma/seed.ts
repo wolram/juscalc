@@ -277,10 +277,30 @@ async function main() {
   console.log("\nIniciando seed...\n");
 
   console.log("Limpando dados anteriores...");
+  // Ordem: filhos antes dos pais (respeita foreign keys)
+  await prisma.movement.deleteMany();
+  await prisma.deadline.deleteMany();
+  await prisma.document.deleteMany();
+  await prisma.finance.deleteMany();
+  await prisma.calculation.deleteMany();
+  await prisma.post.deleteMany();
+  await prisma.template.deleteMany();
   await prisma.scenario.deleteMany();
+  await prisma.process.deleteMany();
   await prisma.analysis.deleteMany();
   await prisma.client.deleteMany();
+  await prisma.member.deleteMany();
+  await prisma.organization.deleteMany();
   await prisma.bcbRate.deleteMany();
+
+  console.log("Criando organização seed...");
+  const org = await prisma.organization.create({
+    data: {
+      name: "Isis Lisboa & Associados",
+      slug: "isis-lisboa-associados",
+    },
+  });
+  console.log(`  Organização: ${org.name} (${org.id})`);
 
   console.log("Inserindo taxas BCB...");
   await prisma.bcbRate.createMany({
@@ -301,7 +321,7 @@ async function main() {
 
   console.log("\nInserindo clientes...");
   const clients = await Promise.all(
-    CLIENTS.map((c) => prisma.client.create({ data: c }))
+    CLIENTS.map((c) => prisma.client.create({ data: { ...c, organizationId: org.id } }))
   );
   console.log(`  ${clients.length} clientes inseridos`);
 
@@ -347,6 +367,7 @@ async function main() {
         overdueInstallments: a.overdueInstallments,
         status: a.status ?? "DRAFT",
         clientId: client.id,
+        organizationId: org.id,
       },
     });
 

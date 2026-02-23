@@ -16,6 +16,7 @@ export async function createAnalysis(input: CreateAnalysisInput): Promise<Analys
       installmentsPaid: input.installmentsPaid,
       overdueInstallments: input.overdueInstallments,
       clientId: input.clientId,
+      organizationId: input.organizationId,
     },
     include: {
       client: true,
@@ -36,11 +37,14 @@ export async function getAnalysisById(id: string): Promise<AnalysisWithRelations
 
 export async function listAnalyses(
   page = 1,
-  limit = 20
+  limit = 20,
+  organizationId?: string
 ): Promise<{ data: AnalysisWithRelations[]; total: number }> {
   const skip = (page - 1) * limit;
+  const where = organizationId ? { organizationId } : {};
   const [data, total] = await Promise.all([
     prisma.analysis.findMany({
+      where,
       skip,
       take: limit,
       orderBy: { createdAt: "desc" },
@@ -49,7 +53,7 @@ export async function listAnalyses(
         scenarios: true,
       },
     }),
-    prisma.analysis.count(),
+    prisma.analysis.count({ where }),
   ]);
 
   return { data, total };
@@ -70,11 +74,12 @@ export async function deleteAnalysis(id: string): Promise<void> {
   await prisma.analysis.delete({ where: { id } });
 }
 
-export async function getDashboardStats() {
+export async function getDashboardStats(organizationId?: string) {
+  const where = organizationId ? { organizationId } : {};
   const [totalAnalyses, totalClients, totalFinalized] = await Promise.all([
-    prisma.analysis.count(),
-    prisma.client.count(),
-    prisma.analysis.count({ where: { status: "FINALIZED" } }),
+    prisma.analysis.count({ where }),
+    prisma.client.count({ where }),
+    prisma.analysis.count({ where: { ...where, status: "FINALIZED" } }),
   ]);
 
   const sixMonthsAgo = new Date();
@@ -82,7 +87,7 @@ export async function getDashboardStats() {
   sixMonthsAgo.setDate(1);
 
   const recentAnalyses = await prisma.analysis.findMany({
-    where: { createdAt: { gte: sixMonthsAgo } },
+    where: { ...where, createdAt: { gte: sixMonthsAgo } },
     select: { createdAt: true, releasedValue: true },
     orderBy: { createdAt: "asc" },
   });
