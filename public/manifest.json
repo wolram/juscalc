@@ -1,0 +1,28 @@
+{
+  "name": "Dra. Isis Lisboa & Associados — Revisional",
+  "short_name": "Revisional",
+  "description": "Sistema de Revisão Contratual Bancária",
+  "theme_color": "#09090B",
+  "background_color": "#09090B",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["productivity", "business"]
+}
