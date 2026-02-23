@@ -1,0 +1,254 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: JusCalc
+          - paragraph [ref=e12]: Plataforma Jurídica
+      - navigation [ref=e16]:
+        - link "Dashboard" [ref=e18] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e19]
+          - text: Dashboard
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Jurídico
+          - link "Revisional" [ref=e26] [cursor=pointer]:
+            - /url: /analyses
+            - img [ref=e27]
+            - text: Revisional
+          - link "Cálculos" [ref=e30] [cursor=pointer]:
+            - /url: /calculations
+            - img [ref=e31]
+            - text: Cálculos
+          - link "Processos" [ref=e33] [cursor=pointer]:
+            - /url: /processes
+            - img [ref=e34]
+            - text: Processos
+          - link "Calendário" [ref=e37] [cursor=pointer]:
+            - /url: /calendar
+            - img [ref=e38]
+            - text: Calendário
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Escritório
+          - link "Clientes" [ref=e42] [cursor=pointer]:
+            - /url: /clients
+            - img [ref=e43]
+            - text: Clientes
+          - link "Financeiro" [ref=e48] [cursor=pointer]:
+            - /url: /finances
+            - img [ref=e49]
+            - text: Financeiro
+          - link "Taxas BCB" [ref=e52] [cursor=pointer]:
+            - /url: /rates
+            - img [ref=e53]
+            - text: Taxas BCB
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: Ferramentas
+          - link "IA Jurídica" [ref=e58] [cursor=pointer]:
+            - /url: /ai
+            - img [ref=e59]
+            - text: IA Jurídica
+          - link "Comunidade" [ref=e62] [cursor=pointer]:
+            - /url: /community
+            - img [ref=e63]
+            - text: Comunidade
+        - link "Configurações" [ref=e66] [cursor=pointer]:
+          - /url: /settings
+          - img [ref=e67]
+          - text: Configurações
+      - paragraph [ref=e71]: JusCalc v2.0
+    - generic [ref=e72]:
+      - banner [ref=e73]:
+        - button "Buscar... ⌘K" [ref=e74]:
+          - generic [ref=e75]:
+            - img
+            - generic [ref=e76]: Buscar...
+          - generic: ⌘K
+        - button [ref=e77]:
+          - img
+        - button "US" [ref=e78]:
+          - generic [ref=e80]: US
+      - main [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - heading "Análises" [level=1] [ref=e85]
+              - paragraph [ref=e86]: 10 análises cadastradas
+            - link "Nova Análise" [ref=e87] [cursor=pointer]:
+              - /url: /analyses/new
+              - img
+              - text: Nova Análise
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: Cliente
+              - generic [ref=e91]: Banco / Modalidade
+              - generic [ref=e92]: Valor
+              - generic [ref=e93]: Taxa
+              - generic [ref=e94]: Status
+            - link "Ana Paula Rodrigues 31/03/2024 Banco Bradesco S.A. Financiamento de Veículo R$ 88.000,00 60x R$ 2.562,32 2,05% a.m. Finalizado" [ref=e95] [cursor=pointer]:
+              - /url: /analyses/cmlzdkyy70010dczfvjgeze8w
+              - generic [ref=e96]:
+                - paragraph [ref=e97]: Ana Paula Rodrigues
+                - paragraph [ref=e98]: 31/03/2024
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: Banco Bradesco S.A.
+                - paragraph [ref=e101]: Financiamento de Veículo
+              - generic [ref=e102]:
+                - paragraph [ref=e103]: R$ 88.000,00
+                - paragraph [ref=e104]: 60x R$ 2.562,32
+              - generic [ref=e105]:
+                - paragraph [ref=e106]: 2,05%
+                - paragraph [ref=e107]: a.m.
+              - generic [ref=e109]: Finalizado
+            - link "Maria Aparecida Silva 31/12/2024 Banco Pan S.A. Financiamento de Veículo R$ 75.000,00 60x R$ 2.583,54 2,78% a.m. Rascunho" [ref=e110] [cursor=pointer]:
+              - /url: /analyses/cmlzdkysf000zdczfe5ixojt2
+              - generic [ref=e111]:
+                - paragraph [ref=e112]: Maria Aparecida Silva
+                - paragraph [ref=e113]: 31/12/2024
+              - generic [ref=e114]:
+                - paragraph [ref=e115]: Banco Pan S.A.
+                - paragraph [ref=e116]: Financiamento de Veículo
+              - generic [ref=e117]:
+                - paragraph [ref=e118]: R$ 75.000,00
+                - paragraph [ref=e119]: 60x R$ 2.583,54
+              - generic [ref=e120]:
+                - paragraph [ref=e121]: 2,78%
+                - paragraph [ref=e122]: a.m.
+              - generic [ref=e124]: Rascunho
+            - link "Pedro Henrique Souza 31/10/2024 NU PAGAMENTOS S.A. - INSTITUIÇÃO DE PAGAMENTO Financiamento de Veículo R$ 48.000,00 48x R$ 1.558,53 1,98% a.m. Rascunho" [ref=e125] [cursor=pointer]:
+              - /url: /analyses/cmlzdkyo3000ydczfsujrckgp
+              - generic [ref=e126]:
+                - paragraph [ref=e127]: Pedro Henrique Souza
+                - paragraph [ref=e128]: 31/10/2024
+              - generic [ref=e129]:
+                - paragraph [ref=e130]: NU PAGAMENTOS S.A. - INSTITUIÇÃO DE PAGAMENTO
+                - paragraph [ref=e131]: Financiamento de Veículo
+              - generic [ref=e132]:
+                - paragraph [ref=e133]: R$ 48.000,00
+                - paragraph [ref=e134]: 48x R$ 1.558,53
+              - generic [ref=e135]:
+                - paragraph [ref=e136]: 1,98%
+                - paragraph [ref=e137]: a.m.
+              - generic [ref=e139]: Rascunho
+            - link "Fernanda Costa Almeida 30/06/2024 Banco Votorantim S.A. Financiamento de Veículo R$ 95.000,00 60x R$ 3.179,43 2,65% a.m. Rascunho" [ref=e140] [cursor=pointer]:
+              - /url: /analyses/cmlzdkyjm000xdczfprr1fbq5
+              - generic [ref=e141]:
+                - paragraph [ref=e142]: Fernanda Costa Almeida
+                - paragraph [ref=e143]: 30/06/2024
+              - generic [ref=e144]:
+                - paragraph [ref=e145]: Banco Votorantim S.A.
+                - paragraph [ref=e146]: Financiamento de Veículo
+              - generic [ref=e147]:
+                - paragraph [ref=e148]: R$ 95.000,00
+                - paragraph [ref=e149]: 60x R$ 3.179,43
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: 2,65%
+                - paragraph [ref=e152]: a.m.
+              - generic [ref=e154]: Rascunho
+            - link "João Carlos Ferreira 31/07/2024 CAIXA ECONOMICA FEDERAL Financiamento de Veículo R$ 135.000,00 60x R$ 3.472,33 1,55% a.m. Rascunho" [ref=e155] [cursor=pointer]:
+              - /url: /analyses/cmlzdkydy000wdczfw3jxjr0l
+              - generic [ref=e156]:
+                - paragraph [ref=e157]: João Carlos Ferreira
+                - paragraph [ref=e158]: 31/07/2024
+              - generic [ref=e159]:
+                - paragraph [ref=e160]: CAIXA ECONOMICA FEDERAL
+                - paragraph [ref=e161]: Financiamento de Veículo
+              - generic [ref=e162]:
+                - paragraph [ref=e163]: R$ 135.000,00
+                - paragraph [ref=e164]: 60x R$ 3.472,33
+              - generic [ref=e165]:
+                - paragraph [ref=e166]: 1,55%
+                - paragraph [ref=e167]: a.m.
+              - generic [ref=e169]: Rascunho
+            - link "Carlos Roberto Oliveira 30/04/2024 BANCO SANTANDER (BRASIL) S.A. Financiamento de Veículo R$ 62.000,00 48x R$ 1.976,34 1,89% a.m. Rascunho" [ref=e170] [cursor=pointer]:
+              - /url: /analyses/cmlzdky9l000vdczf7gu09ton
+              - generic [ref=e171]:
+                - paragraph [ref=e172]: Carlos Roberto Oliveira
+                - paragraph [ref=e173]: 30/04/2024
+              - generic [ref=e174]:
+                - paragraph [ref=e175]: BANCO SANTANDER (BRASIL) S.A.
+                - paragraph [ref=e176]: Financiamento de Veículo
+              - generic [ref=e177]:
+                - paragraph [ref=e178]: R$ 62.000,00
+                - paragraph [ref=e179]: 48x R$ 1.976,34
+              - generic [ref=e180]:
+                - paragraph [ref=e181]: 1,89%
+                - paragraph [ref=e182]: a.m.
+              - generic [ref=e184]: Rascunho
+            - link "Ana Paula Rodrigues 31/01/2024 ITAÚ UNIBANCO S.A. Financiamento de Veículo R$ 115.000,00 60x R$ 4.334,94 3,20% a.m. Rascunho" [ref=e185] [cursor=pointer]:
+              - /url: /analyses/cmlzdky57000udczfps3ehq92
+              - generic [ref=e186]:
+                - paragraph [ref=e187]: Ana Paula Rodrigues
+                - paragraph [ref=e188]: 31/01/2024
+              - generic [ref=e189]:
+                - paragraph [ref=e190]: ITAÚ UNIBANCO S.A.
+                - paragraph [ref=e191]: Financiamento de Veículo
+              - generic [ref=e192]:
+                - paragraph [ref=e193]: R$ 115.000,00
+                - paragraph [ref=e194]: 60x R$ 4.334,94
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: 3,20%
+                - paragraph [ref=e197]: a.m.
+              - generic [ref=e199]: Rascunho
+            - link "Pedro Henrique Souza 30/09/2024 Banco do Brasil S.A. Financiamento de Veículo R$ 58.000,00 60x R$ 1.469,04 1,49% a.m. Rascunho" [ref=e200] [cursor=pointer]:
+              - /url: /analyses/cmlzdkxzo000tdczf9n1zidvq
+              - generic [ref=e201]:
+                - paragraph [ref=e202]: Pedro Henrique Souza
+                - paragraph [ref=e203]: 30/09/2024
+              - generic [ref=e204]:
+                - paragraph [ref=e205]: Banco do Brasil S.A.
+                - paragraph [ref=e206]: Financiamento de Veículo
+              - generic [ref=e207]:
+                - paragraph [ref=e208]: R$ 58.000,00
+                - paragraph [ref=e209]: 60x R$ 1.469,04
+              - generic [ref=e210]:
+                - paragraph [ref=e211]: 1,49%
+                - paragraph [ref=e212]: a.m.
+              - generic [ref=e214]: Rascunho
+            - link "Maria Aparecida Silva 31/05/2024 Banco Bradesco S.A. Financiamento de Veículo R$ 68.000,00 48x R$ 2.262,28 2,10% a.m. Rascunho" [ref=e215] [cursor=pointer]:
+              - /url: /analyses/cmlzdkxvb000sdczfoowa8j5x
+              - generic [ref=e216]:
+                - paragraph [ref=e217]: Maria Aparecida Silva
+                - paragraph [ref=e218]: 31/05/2024
+              - generic [ref=e219]:
+                - paragraph [ref=e220]: Banco Bradesco S.A.
+                - paragraph [ref=e221]: Financiamento de Veículo
+              - generic [ref=e222]:
+                - paragraph [ref=e223]: R$ 68.000,00
+                - paragraph [ref=e224]: 48x R$ 2.262,28
+              - generic [ref=e225]:
+                - paragraph [ref=e226]: 2,10%
+                - paragraph [ref=e227]: a.m.
+              - generic [ref=e229]: Rascunho
+            - link "João Carlos Ferreira 29/02/2024 Banco Pan S.A. Financiamento de Veículo R$ 82.000,00 60x R$ 2.893,43 2,89% a.m. Rascunho" [ref=e230] [cursor=pointer]:
+              - /url: /analyses/cmlzdkxqk000rdczfvv9wlsmf
+              - generic [ref=e231]:
+                - paragraph [ref=e232]: João Carlos Ferreira
+                - paragraph [ref=e233]: 29/02/2024
+              - generic [ref=e234]:
+                - paragraph [ref=e235]: Banco Pan S.A.
+                - paragraph [ref=e236]: Financiamento de Veículo
+              - generic [ref=e237]:
+                - paragraph [ref=e238]: R$ 82.000,00
+                - paragraph [ref=e239]: 60x R$ 2.893,43
+              - generic [ref=e240]:
+                - paragraph [ref=e241]: 2,89%
+                - paragraph [ref=e242]: a.m.
+              - generic [ref=e244]: Rascunho
+    - generic [ref=e245]:
+      - heading "Command Palette" [level=2] [ref=e246]
+      - paragraph [ref=e247]: Search for a command to run...
+  - region "Notifications alt+T"
+  - generic [ref=e252] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e253]:
+      - img [ref=e254]
+    - generic [ref=e257]:
+      - button "Open issues overlay" [ref=e258]:
+        - generic [ref=e259]:
+          - generic [ref=e260]: "0"
+          - generic [ref=e261]: "1"
+        - generic [ref=e262]: Issue
+      - button "Collapse issues badge" [ref=e263]:
+        - img [ref=e264]
+  - alert [ref=e266]

@@ -1,0 +1,178 @@
+### Browser `rw4` opened with pid 29594.
+- rw4:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: true
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/login');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-33-47-061Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-33-52-936Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-33-58-433Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-33-58-433Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-33-58-433Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'E-mail' }).fill('Isis@isislisboa.com.br');
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'Senha' }).fill('1234abcD');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-34-15-314Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-34-19-565Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-34-19-565Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-34-19-565Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('button', { name: 'Entrar' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-34-26-097Z.yml)
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-34-32-283Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-34-37-165Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-34-37-165Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-34-37-165Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+TypeError: (intermediate value) is not a function
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-34-51-697Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-34-56-810Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-34-56-810Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-34-56-810Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+TypeError: (intermediate value) is not a function
+### Page
+- Page URL: http://localhost:3000/analyses
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+- Console: 1 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-35-09-722Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-02-23T17-33-46-462Z.log#L1-L83
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-35-14-421Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-35-14-421Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-35-14-421Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+TypeError: (intermediate value) is not a function
+### Page
+- Page URL: http://localhost:3000/clients
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+- Console: 1 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-35-28-174Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-35-33-024Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-35-33-024Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-35-33-024Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+TypeError: (intermediate value) is not a function
+### Page
+- Page URL: http://localhost:3000/finances
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+- Console: 2 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-35-46-211Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-02-23T17-33-46-462Z.log#L84-L166
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-35-50-459Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-35-50-459Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-35-50-459Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+TypeError: (intermediate value) is not a function
+### Page
+- Page URL: http://localhost:3000/settings
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+- Console: 2 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-36-03-346Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-36-07-786Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-36-07-786Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-36-07-786Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```

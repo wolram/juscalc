@@ -1,0 +1,28 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e6]
+      - generic [ref=e10]:
+        - heading "Dra. Isis Lisboa & Associados" [level=1] [ref=e11]
+        - paragraph [ref=e12]: Sistema de Revisão Contratual
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Acesso ao sistema
+        - generic [ref=e16]: Entre com suas credenciais do escritório
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: E-mail
+          - textbox "E-mail" [ref=e21]:
+            - /placeholder: usuario@escritorio.com.br
+            - text: Isis@isislisboa.com.br
+        - generic [ref=e22]:
+          - generic [ref=e23]: Senha
+          - textbox "Senha" [active] [ref=e24]:
+            - /placeholder: ••••••••
+            - text: 1234abcD
+        - button "Entrar" [ref=e25]
+    - paragraph [ref=e26]: Acesso restrito ao escritório.
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e32] [cursor=pointer]:
+    - img [ref=e33]
+  - alert [ref=e36]

@@ -1,0 +1,235 @@
+### Browser `rw3` opened with pid 27986.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: true
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/login');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-30-53-302Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-30-59-063Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-31-02-938Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-31-02-938Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-31-02-938Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'E-mail' }).fill('Isis@isislisboa.com.br');
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'Senha' }).fill('1234abcD');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-31-18-400Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-31-22-238Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-31-22-238Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-31-22-238Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('button', { name: 'Entrar' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-31-29-897Z.yml)
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-31-37-180Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-31-42-180Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-31-42-180Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-31-42-180Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Browser `rw3` opened with pid 28371.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: false
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/dashboard');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-31-50-863Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-31-57-450Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-32-02-149Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-32-02-149Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-32-02-149Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Browser `rw3` opened with pid 28479.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: false
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/analyses');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-09-660Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-14-836Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-32-20-542Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-32-20-542Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-32-20-542Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Browser `rw3` opened with pid 28591.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: false
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/clients');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-27-911Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-33-014Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-32-37-301Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-32-37-301Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-32-37-301Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Browser `rw3` opened with pid 28692.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: false
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/finances');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-43-864Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-32-49-297Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-32-53-732Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-32-53-732Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-32-53-732Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Browser `rw3` opened with pid 29404.
+- rw3:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: false
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/settings');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-33-02-702Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-33-08-905Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-33-13-109Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-33-13-109Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-33-13-109Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```

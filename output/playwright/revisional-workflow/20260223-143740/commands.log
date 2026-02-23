@@ -1,0 +1,230 @@
+### Browser `rw5` opened with pid 31523.
+- rw5:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: true
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/login');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-37-48-469Z.yml)
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-37-53-703Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-37-57-927Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-37-57-927Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-37-57-927Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'E-mail' }).fill('Isis@isislisboa.com.br');
+```
+### Ran Playwright code
+```js
+await page.getByRole('textbox', { name: 'Senha' }).fill('1234abcD');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-13-012Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-38-16-954Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-38-16-954Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-38-16-954Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Ran Playwright code
+```js
+await page.getByRole('button', { name: 'Entrar' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-23-369Z.yml)
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-29-538Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-38-33-682Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-38-33-682Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-38-33-682Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-37-440Z.yml)
+### Ran Playwright code
+```js
+await page.getByRole('link', { name: 'Dashboard' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-45-102Z.yml)
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-50-278Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-38-54-296Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-38-54-296Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-38-54-296Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Page
+- Page URL: http://localhost:3000/dashboard
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-38-58-154Z.yml)
+### Ran Playwright code
+```js
+await page.getByRole('link', { name: 'Revisional' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/analyses
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-04-797Z.yml)
+### Page
+- Page URL: http://localhost:3000/analyses
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-09-760Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-39-13-864Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-39-13-864Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-39-13-864Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Page
+- Page URL: http://localhost:3000/analyses
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-17-970Z.yml)
+### Ran Playwright code
+```js
+await page.getByRole('link', { name: 'Clientes' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/clients
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-25-639Z.yml)
+### Page
+- Page URL: http://localhost:3000/clients
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-30-949Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-39-35-006Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-39-35-006Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-39-35-006Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Page
+- Page URL: http://localhost:3000/clients
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-39-259Z.yml)
+### Ran Playwright code
+```js
+await page.getByRole('link', { name: 'Financeiro' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/finances
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-50-409Z.yml)
+### Page
+- Page URL: http://localhost:3000/finances
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-39-56-256Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-40-00-464Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-40-00-464Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-40-00-464Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Page
+- Page URL: http://localhost:3000/finances
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-40-04-451Z.yml)
+### Ran Playwright code
+```js
+await page.getByRole('link', { name: 'Configurações' }).click();
+```
+### Page
+- Page URL: http://localhost:3000/settings
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-40-11-572Z.yml)
+### Page
+- Page URL: http://localhost:3000/settings
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-40-16-755Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-40-20-755Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-40-20-755Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-40-20-755Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```

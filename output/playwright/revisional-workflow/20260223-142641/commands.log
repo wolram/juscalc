@@ -1,0 +1,159 @@
+### Browser `rw2` opened with pid 24026.
+- rw2:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: true
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/login');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-26-49-905Z.yml)
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-26-58-529Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-27-02-951Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-27-02-951Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-27-02-951Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-27-11-665Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-27-16-582Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-27-16-582Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-27-16-582Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-27-26-814Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-27-31-739Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-27-31-739Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-27-31-739Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-27-40-319Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-27-44-569Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-27-44-569Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-27-44-569Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-27-53-347Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-27-58-321Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-27-58-321Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-27-58-321Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-28-08-223Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-28-12-768Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-28-12-768Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-28-12-768Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-28-21-675Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-28-26-406Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-28-26-406Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-28-26-406Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected reserved word
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-28-35-611Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-28-40-304Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-28-40-304Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-28-40-304Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```

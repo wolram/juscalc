@@ -1,0 +1,159 @@
+### Browser `rw` opened with pid 22309.
+- rw:
+  - browser-type: chrome
+  - user-data-dir: <in-memory>
+  - headed: true
+---
+### Ran Playwright code
+```js
+await page.goto('http://localhost:3000/login');
+```
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-23-59-940Z.yml)
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-24-09-044Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-24-13-670Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-24-13-670Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-24-13-670Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-24-22-326Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-24-27-255Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-24-27-255Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-24-27-255Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-24-35-766Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-24-39-854Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-24-39-854Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-24-39-854Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-24-51-556Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-25-00-005Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-25-00-005Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-25-00-005Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-25-12-322Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-25-16-865Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-25-16-865Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-25-16-865Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-25-26-642Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-25-30-926Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-25-30-926Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-25-30-926Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-25-39-848Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-25-44-068Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-25-44-068Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-25-44-068Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Error
+SyntaxError: Unexpected token ';'
+### Page
+- Page URL: http://localhost:3000/login
+- Page Title: Revisional — Dra. Isis Lisboa & Associados
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-02-23T17-25-52-299Z.yml)
+### Result
+- [Screenshot of viewport](.playwright-cli/page-2026-02-23T17-25-56-585Z.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as .playwright-cli/page-2026-02-23T17-25-56-585Z.png
+await page.screenshot({
+path: '.playwright-cli/page-2026-02-23T17-25-56-585Z.png',
+  scale: 'css',
+  type: 'png'
+});
+```

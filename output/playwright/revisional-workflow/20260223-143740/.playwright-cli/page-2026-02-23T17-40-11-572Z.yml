@@ -1,0 +1,121 @@
+- generic [ref=e1]:
+  - generic [ref=e45]:
+    - complementary [ref=e46]:
+      - generic [ref=e47]:
+        - img [ref=e49]
+        - generic [ref=e53]:
+          - paragraph [ref=e54]: JusCalc
+          - paragraph [ref=e55]: Plataforma Jurídica
+      - navigation [ref=e59]:
+        - link "Dashboard" [ref=e61] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e62]
+          - text: Dashboard
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: Jurídico
+          - link "Revisional" [ref=e69] [cursor=pointer]:
+            - /url: /analyses
+            - img [ref=e70]
+            - text: Revisional
+          - link "Cálculos" [ref=e73] [cursor=pointer]:
+            - /url: /calculations
+            - img [ref=e74]
+            - text: Cálculos
+          - link "Processos" [ref=e76] [cursor=pointer]:
+            - /url: /processes
+            - img [ref=e77]
+            - text: Processos
+          - link "Calendário" [ref=e80] [cursor=pointer]:
+            - /url: /calendar
+            - img [ref=e81]
+            - text: Calendário
+        - generic [ref=e83]:
+          - paragraph [ref=e84]: Escritório
+          - link "Clientes" [ref=e85] [cursor=pointer]:
+            - /url: /clients
+            - img [ref=e86]
+            - text: Clientes
+          - link "Financeiro" [ref=e91] [cursor=pointer]:
+            - /url: /finances
+            - img [ref=e92]
+            - text: Financeiro
+          - link "Taxas BCB" [ref=e95] [cursor=pointer]:
+            - /url: /rates
+            - img [ref=e96]
+            - text: Taxas BCB
+        - generic [ref=e99]:
+          - paragraph [ref=e100]: Ferramentas
+          - link "IA Jurídica" [ref=e101] [cursor=pointer]:
+            - /url: /ai
+            - img [ref=e102]
+            - text: IA Jurídica
+          - link "Comunidade" [ref=e105] [cursor=pointer]:
+            - /url: /community
+            - img [ref=e106]
+            - text: Comunidade
+        - link "Configurações" [active] [ref=e109] [cursor=pointer]:
+          - /url: /settings
+          - img [ref=e110]
+          - text: Configurações
+      - paragraph [ref=e114]: JusCalc v2.0
+    - generic [ref=e115]:
+      - banner [ref=e116]:
+        - button "Buscar... ⌘K" [ref=e117]:
+          - generic [ref=e118]:
+            - img
+            - generic [ref=e119]: Buscar...
+          - generic: ⌘K
+        - button [ref=e120]:
+          - img
+        - button "US" [ref=e121]:
+          - generic [ref=e123]: US
+      - main [ref=e124]:
+        - generic [ref=e482]:
+          - generic [ref=e483]:
+            - heading "Configurações" [level=1] [ref=e484]
+            - paragraph [ref=e485]: Escritório, equipe e plano
+          - generic [ref=e486]:
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - generic [ref=e489]: Escritório
+                - generic [ref=e490]: Informações do seu escritório
+              - generic [ref=e491]:
+                - generic [ref=e492]:
+                  - generic [ref=e493]: Nome
+                  - generic [ref=e494]:
+                    - textbox "Nome" [ref=e495]: Marlow Sousa
+                    - button "Salvar" [disabled]
+                - generic [ref=e496]:
+                  - generic [ref=e497]: "Plano atual:"
+                  - generic [ref=e498]: Gratuito
+                - generic [ref=e499]:
+                  - text: "Slug:"
+                  - code [ref=e500]: marlow-sousa
+            - generic [ref=e501]:
+              - generic [ref=e502]:
+                - generic [ref=e503]: Equipe
+                - generic [ref=e504]: 1 membro
+              - generic [ref=e507]:
+                - generic [ref=e508]:
+                  - generic [ref=e509]: 6c8f8d8c-570f-4987-ae82-6846bb6b7074
+                  - generic [ref=e510]: Desde 23/02/2026
+                - generic [ref=e511]: Proprietário
+            - generic [ref=e512]:
+              - generic [ref=e514]: Sobre o Sistema
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - generic [ref=e517]: Sistema
+                  - generic [ref=e518]: JusCalc — Plataforma Jurídica
+                - generic [ref=e519]:
+                  - generic [ref=e520]: Versão
+                  - generic [ref=e521]: 2.0.0
+                - generic [ref=e522]:
+                  - generic [ref=e523]: Fundamentação
+                  - generic [ref=e524]: CDC art. 51, STJ REsp 1.061.530/RS, Res. BCB 4.855/2020
+    - generic [ref=e215]:
+      - heading "Command Palette" [level=2] [ref=e216]
+      - paragraph [ref=e217]: Search for a command to run...
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e32] [cursor=pointer]:
+    - img [ref=e33]
+  - alert [ref=e36]
