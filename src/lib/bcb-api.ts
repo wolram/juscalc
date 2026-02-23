@@ -5,25 +5,26 @@ export interface BcbRateEntry {
   source: string;
 }
 
-interface BcbApiRecord {
-  Mes: string;
-  Taxa: string;
-  Modalidade?: string;
-}
+// SGS série 20714: Crédito pessoal não consignado — % a.a.
+// https://api.bcb.gov.br/dados/serie/bcdata.sgs.20714/dados
+const SGS_BASE_URL = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.20714/dados";
 
-interface BcbApiResponse {
-  value: BcbApiRecord[];
+function annualToMonthly(rateAnnual: number): number {
+  // Equivalência composta: r_m = (1 + r_a)^(1/12) - 1
+  const monthly = (Math.pow(1 + rateAnnual / 100, 1 / 12) - 1) * 100;
+  return Math.round(monthly * 10000) / 10000;
 }
-
-const BCB_OSTAT_BASE_URL =
-  "https://olinda.bcb.gov.br/olinda/servico/OSTAT_Meses/versao/v1/odata/TaxasCredito";
 
 export async function fetchBcbRateForMonth(
   month: number,
   year: number
 ): Promise<BcbRateEntry | null> {
-  const monthStr = `${year}-${String(month).padStart(2, "0")}`;
-  const url = `${BCB_OSTAT_BASE_URL}?$format=json&$filter=Mes eq '${monthStr}'&$top=10`;
+  const mm = String(month).padStart(2, "0");
+  const lastDay = new Date(year, month, 0).getDate();
+  const startDate = `01/${mm}/${year}`;
+  const endDate = `${lastDay}/${mm}/${year}`;
+
+  const url = `${SGS_BASE_URL}?formato=json&dataInicial=${startDate}&dataFinal=${endDate}`;
 
   try {
     const response = await fetch(url, {
@@ -33,25 +34,21 @@ export async function fetchBcbRateForMonth(
 
     if (!response.ok) return null;
 
-    const data = (await response.json()) as BcbApiResponse;
+    const data = (await response.json()) as Array<{ data: string; valor: string }>;
 
-    if (!data.value || data.value.length === 0) return null;
+    if (!data || data.length === 0) return null;
 
-    // Busca a modalidade de crédito pessoal não consignado (referência de mercado)
-    const record =
-      data.value.find((r) =>
-        r.Modalidade?.toLowerCase().includes("pessoal")
-      ) ?? data.value[0];
-
+    const record = data[0];
     if (!record) return null;
 
-    const rate = parseFloat(record.Taxa ?? "0");
+    const rateAnnual = parseFloat(record.valor);
+    if (isNaN(rateAnnual)) return null;
 
     return {
       month,
       year,
-      rate,
-      source: "BCB-OSTAT",
+      rate: annualToMonthly(rateAnnual),
+      source: "BCB-SGS",
     };
   } catch {
     return null;
