@@ -20,17 +20,22 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
 
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    try {
+      const supabase = createClient();
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-    if (error) {
-      toast.error("Credenciais inválidas. Verifique seu e-mail e senha.");
+      if (error) {
+        toast.error("Credenciais inválidas. Verifique seu e-mail e senha.");
+        return;
+      }
+
+      router.push("/dashboard");
+      router.refresh();
+    } catch {
+      toast.error("Não foi possível acessar agora. Tente novamente.");
+    } finally {
       setLoading(false);
-      return;
     }
-
-    router.push("/dashboard");
-    router.refresh();
   }
 
   return (
