@@ -175,7 +175,7 @@ export default function PeticaoPage() {
               </div>
             ) : (
               <p className="text-sm text-muted-foreground py-8 text-center">
-                Preencha os dados e clique em "Gerar Petição"
+                Preencha os dados e clique em &quot;Gerar Petição&quot;
               </p>
             )}
           </CardContent>

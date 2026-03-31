@@ -1,12 +1,19 @@
 {
-  "name": "revisional",
+  "name": "juscalc",
   "version": "0.1.0",
   "private": true,
+  "description": "Plataforma jurídica para revisão contratual bancária, cálculos especializados e gestão de escritório.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck",
+    "prisma:generate": "prisma generate",
     "db:push": "tsx scripts/db-push.ts",
     "seed": "tsx prisma/seed.ts"
   },

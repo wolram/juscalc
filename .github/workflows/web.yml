@@ -1,4 +1,4 @@
-name: web
+name: ci
 
 on:
   pull_request:
@@ -8,6 +8,13 @@ on:
 jobs:
   web:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/juscalc?schema=public
+      NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: anon-key-placeholder
+      ANTHROPIC_API_KEY: anthropic-placeholder
+      DATAJUD_API_KEY: datajud-placeholder
+      CRON_SECRET: cron-placeholder
     steps:
       - uses: actions/checkout@v4
 
@@ -22,10 +29,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm lint
+      - run: pnpm prisma:generate
+
+      - run: pnpm check
 
       - run: pnpm build
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}

@@ -18,6 +18,8 @@ export const viewport: Viewport = {
   themeColor: "#1a1a1a",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({
   children,
 }: Readonly<{

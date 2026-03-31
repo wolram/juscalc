@@ -66,6 +66,16 @@ export function getTribunalId(sigla: string): string | null {
   return TRIBUNAL_MAP[sigla.toUpperCase()] ?? null;
 }
 
+function getDataJudApiKey(): string {
+  const apiKey = process.env.DATAJUD_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("DATAJUD_API_KEY não configurada");
+  }
+
+  return apiKey;
+}
+
 export async function consultarProcesso(
   cnjNumber: string,
   tribunalSigla: string
@@ -93,7 +103,7 @@ export async function consultarProcesso(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "ApiKey cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==",
+      Authorization: `ApiKey ${getDataJudApiKey()}`,
     },
     body: JSON.stringify(body),
     next: { revalidate: 3600 }, // Cache 1h

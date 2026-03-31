@@ -1,7 +1,7 @@
 {
-  "name": "Dra. Isis Lisboa & Associados — Revisional",
-  "short_name": "Revisional",
-  "description": "Sistema de Revisão Contratual Bancária",
+  "name": "JusCalc — Plataforma Jurídica",
+  "short_name": "JusCalc",
+  "description": "Plataforma jurídica para revisão contratual, cálculos e gestão operacional do escritório.",
   "theme_color": "#09090B",
   "background_color": "#09090B",
   "display": "standalone",
@@ -11,15 +11,9 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ],

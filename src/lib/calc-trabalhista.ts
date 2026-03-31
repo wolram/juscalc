@@ -104,10 +104,6 @@ function mesesEntre(inicio: Date, fim: Date): number {
   return (fim.getFullYear() - inicio.getFullYear()) * 12 + (fim.getMonth() - inicio.getMonth());
 }
 
-function diasEntre(inicio: Date, fim: Date): number {
-  return Math.floor((fim.getTime() - inicio.getTime()) / (1000 * 60 * 60 * 24));
-}
-
 // ─── Rescisão ─────────────────────────────────────────────────────────────────
 
 export function calcularRescisao(input: RescisaoInput): RescisaoResult {

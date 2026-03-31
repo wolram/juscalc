@@ -44,7 +44,7 @@ export default function TrabalhistaPage() {
     try {
       const result = calcularRescisao(data);
       setRescisaoResult(result);
-    } catch (err) {
+    } catch {
       toast.error("Erro no cálculo");
     }
   }
@@ -53,7 +53,7 @@ export default function TrabalhistaPage() {
     try {
       const result = calcularHorasExtras(data);
       setHorasResult(result);
-    } catch (err) {
+    } catch {
       toast.error("Erro no cálculo");
     }
   }

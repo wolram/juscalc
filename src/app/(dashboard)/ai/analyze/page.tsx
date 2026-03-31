@@ -105,7 +105,7 @@ export default function AnalizePage() {
               </div>
             ) : (
               <p className="text-sm text-muted-foreground py-8 text-center">
-                Cole um documento e clique em "Analisar"
+                Cole um documento e clique em &quot;Analisar&quot;
               </p>
             )}
           </CardContent>
