@@ -1,13 +1,19 @@
-# JusCalc
+<div align="center">
 
-Plataforma jurídica full-stack para revisão contratual bancária, cálculos especializados e gestão operacional de escritório.
+# JusCalc — Legal Finance Platform
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-111827?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-2563eb?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-ORM-0f172a?logo=prisma)](https://www.prisma.io/)
-[![Supabase](https://img.shields.io/badge/Supabase-Auth%20%2B%20Postgres-16a34a?logo=supabase&logoColor=white)](https://supabase.com/)
-[![pnpm](https://img.shields.io/badge/pnpm-Workspace-f59e0b?logo=pnpm&logoColor=white)](https://pnpm.io/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-22c55e)](./LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://prisma.io/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](./LICENSE)
+
+**Plataforma jurídica full-stack para revisão contratual bancária, cálculos especializados e gestão operacional de escritório**
+
+</div>
+
+---
 
 JusCalc nasceu com foco em produtividade jurídica de ponta a ponta. O núcleo do produto compara a taxa contratada em financiamentos com a média BACEN, aplica critérios jurisprudenciais do STJ, simula cenários revisionais com Tabela Price e gera laudos técnicos em PDF. Ao redor desse núcleo, o sistema também concentra clientes, processos, prazos, fluxo financeiro e ferramentas de IA jurídica em uma única interface.
 
@@ -181,3 +187,7 @@ docs/
 ## Licença
 
 MIT. Veja [LICENSE](./LICENSE).
+
+---
+
+*Part of [Marlow Sousa's portfolio](https://marlow.dev.br) · Built with Claude Code + Cursor*
